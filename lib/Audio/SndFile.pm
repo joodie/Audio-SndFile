@@ -22,7 +22,7 @@ use 5.006;
 use strict;
 use warnings;
 use Carp qw(croak);
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 use Fcntl;
 require XSLoader;
 XSLoader::load('Audio::SndFile', $VERSION);
