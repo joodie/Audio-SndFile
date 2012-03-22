@@ -22,7 +22,7 @@ use 5.006;
 use strict;
 use warnings;
 use Carp qw(croak);
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 use Fcntl;
 require XSLoader;
 XSLoader::load('Audio::SndFile', $VERSION);
@@ -508,6 +508,16 @@ There is currently no way to read seperate channels into seperate buffers.
 
 =over 4
 
+=item v0.09
+
+Documentation updates. Documented changes for v0.08.
+Fixed MANIFEST to include test wav for fix in 0.08
+
+=item v0.08
+
+Tomas Doran fixed an issue with opening broken files. Added test case
+for this fix. See commit 24b54574a0a17a6c6f0fce033d62c2c0d8275361
+
 =item v0.07
 
 Noticed that installation was aborting on systems with perl < 5.8.6. Moved
@@ -563,7 +573,9 @@ L<Audio::LADSPA> - process audio streams using LADSPA plugins.
 
 =head1 AUTHOR
 
-Joost Diepenmaat, E<lt>joost@zeekat.nlE<gt>. L<http://zeekat.nl>. 
+Joost Diepenmaat, E<lt>joost@zeekat.nlE<gt>. L<http://zeekat.nl>.
+
+With bug fix by Tomas Doran E<lt>bobtfish@bobtfish.netE<gt>. Thanks!
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -571,7 +583,7 @@ B<Note:> The following copyright & license only apply to this perl package
 (i.e. the "glue" to libsndfile). See L<http://www.mega-nerd.com/libsndfile/#Licensing>
 for the license to libsndfile.
 
-Copyright (C) 2006 by Joost Diepenmaat, Zeekat Softwareontwikkeling
+Copyright (C) 2006, 2012 Joost Diepenmaat, Zeekat Softwareontwikkeling
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
