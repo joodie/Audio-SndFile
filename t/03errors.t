@@ -1,6 +1,6 @@
 #!perl -w
 use strict;
-use Test::More tests => 3;
+use Test::More tests => 4;
 BEGIN {
     use_ok("Audio::SndFile");
 }
@@ -23,3 +23,9 @@ eval {
      );
 };
 ok($@ =~ /No samplerate/,"No samplerate specified");
+
+eval {
+    Audio::SndFile->open("<","t/empty.wav");
+};
+ok ($@ =~ /Error/,"Working exceptions on invalid files");
+
