@@ -8,6 +8,7 @@ t/01basic.t
 t/02copy.t
 t/03errors.t
 t/test.wav
+t/empty.wav
 typemap
 COPYING
 README
